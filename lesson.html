@@ -22,16 +22,16 @@
 
   </head>
   <body>
-    <textarea cols=80 rows=20 id='program'> </textarea>
+    <textarea rows=20 id='program'> </textarea>
     <a href='#' id='eval'>Run!</a>
-    <textarea cols=80 rows=20 id='output'> </textarea>
+    <textarea rows=20 id='output'> </textarea>
 
-    <div class='px320x240'>
+    <div class='px640x300'>
 
       <!-- game -->
       <script type='application/processing'>
         // @pjs preload must be used to preload the image so that it will be available when used in the sketch  
-        /* @pjs preload="dirt.jpg"; */
+        /* @pjs preload="map.png"; */
 
         PImage a;
 
@@ -42,9 +42,9 @@
 
 
         void setup() {
-          size(320, 240);
+          size(640, 300);
           smooth();
-          a = loadImage("dirt.jpg");
+          a = loadImage("map.png");
         }
 
         void draw() {
@@ -144,8 +144,8 @@
           popMatrix();
         }
       </script>
-      <canvas width="320" height="240"></canvas></div>
-      <div style='display:none'><img src="dirt.jpg" id="dirt.jpg"/></div>
+      <canvas width="640" height="300"></canvas></div>
+      <div style='display:none'><img src="map.png" id="map.png"/></div>
     </div>
 
   </body>

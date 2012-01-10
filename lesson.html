@@ -22,9 +22,6 @@
 
   </head>
   <body>
-    <textarea rows=20 id='program'> </textarea>
-    <a href='#' id='eval'>Run!</a>
-    <textarea rows=20 id='output'> </textarea>
 
     <div class='px640x300'>
 
@@ -144,7 +141,12 @@
           popMatrix();
         }
       </script>
-      <canvas width="640" height="300"></canvas></div>
+      <canvas width="640" height="300"></canvas>
+    </div>
+      <textarea rows=20 cols=60 id='program'> </textarea>
+      <br />
+      <a href='#' id='eval'>Run!</a>
+      <textarea rows=5 id='output'> </textarea>
       <div style='display:none'><img src="map.png" id="map.png"/></div>
     </div>
 

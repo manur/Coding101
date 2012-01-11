@@ -61,14 +61,7 @@
       .jqconsole-composition {
         background-color: red;
       }
-      a:link, a:active { 
-        color: #DDD;
-      }
-      a:hover {
-        color: #FFF
-      }
     </style>
-
 
     <script>
       $(function() {
@@ -204,23 +197,11 @@
           y = target_y;
         }
 
-        $('a#showmap').click(function() {
-          $('.p640x300').toggle(1);
-        });
-
-        $('a#showcheatsheet').click(function() {
-          $('#cheatsheet').toggle(1);
-        });
-
       </script>
       <canvas width="640" height="300"></canvas>
     </div>
     <div id="console"></div>
     <div style='display:none'><img src="map.png" id="map.png"/></div>
-    <div style="margin: 0 auto; width: 200px; padding: 20px">
-      <a href="#" id="showmap">Map</a>
-      <a href="#" id="showcheatsheet" style="display:none">Cheatsheet</a>
-    </div>
     </div>
 
   </body>

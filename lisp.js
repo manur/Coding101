@@ -218,7 +218,7 @@ this["and"] = function()
    return cond;
 };
 
-
+this["if"] = this["cond"];
 this["or"] = function()
 {
    var ret = NIL;

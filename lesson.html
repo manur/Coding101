@@ -99,18 +99,17 @@
 
 
         // Bind Control Keys: WASD
-$(document).keydown(function(e){
-    if (e.keyCode == 37) { 
-       interpret('(west)');
-     } else if(e.keyCode == 38) {
-       interpret('(north)');
-     } else if(e.keyCode == 39) {
-       interpret('(east)');
-     } else if(e.keyCode == 40) {
-       interpret('(south)');
-     }
-   return false
-});
+        $(document).keydown(function(e){
+            if (e.keyCode == 37) { 
+               interpret('(west)');
+             } else if(e.keyCode == 38) {
+               interpret('(north)');
+             } else if(e.keyCode == 39) {
+               interpret('(east)');
+             } else if(e.keyCode == 40) {
+               interpret('(south)');
+             }
+        });
 
 
         jqconsole.RegisterMatching('{', '}', 'brace');

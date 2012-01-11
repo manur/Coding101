@@ -88,23 +88,30 @@
           handler();
         });
 
-        // Control Keys: WASD
-        jqconsole.RegisterShortcut('W', function() {
-          interpret('(north)');
+        // Bootstrap solution
+        jqconsole.RegisterShortcut('M', function() {
+          interpret("(defun north() (setq direction 0)");
+          interpret("(defun east() (setq direction 1)");
+          interpret("(defun south() (setq direction 2)");
+          interpret("(defun west() (setq direction 3)");
           handler();
         });
-        jqconsole.RegisterShortcut('d', function() {
-          interpret('(east)');
-          handler();
-        });
-        jqconsole.RegisterShortcut('a', function() {
-          interpret('(west)');
-          handler();
-        });
-        jqconsole.RegisterShortcut('s', function() {
-          interpret('(south)');
-          handler();
-        });
+
+
+        // Bind Control Keys: WASD
+$(document).keydown(function(e){
+    if (e.keyCode == 37) { 
+       interpret('(west)');
+     } else if(e.keyCode == 38) {
+       interpret('(north)');
+     } else if(e.keyCode == 39) {
+       interpret('(east)');
+     } else if(e.keyCode == 40) {
+       interpret('(south)');
+     }
+   return false
+});
+
 
         jqconsole.RegisterMatching('{', '}', 'brace');
         jqconsole.RegisterMatching('(', ')', 'paran');

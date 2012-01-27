@@ -336,6 +336,7 @@ this["print"] = function()
    
    return arguments[0];
 };
+this["get"] = this["print"];
 
 
 this["quote"] = this["'"] = function()
@@ -424,7 +425,7 @@ this["setq"] = function()
    
    return obj = value;
 };
-
+this["set"] = this["setq"];
 
 this["setf"] = function()
 {

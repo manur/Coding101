@@ -425,7 +425,6 @@ this["setq"] = function()
    return obj = value;
 };
 
-
 this["setf"] = function()
 {
    return Lisp.global.setq.call(this, arguments);
@@ -1504,5 +1503,7 @@ window.onload = function()
 
 };
 
+this["set"] = this["setq"]; 
+this["get"] = this["print"]; 
 
 // window.addEventListener("onload", Lisp.onload, true);
